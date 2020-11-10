@@ -1,3 +1,4 @@
+[![openupm](https://img.shields.io/npm/v/com.sark.tiled_camera?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.sark.tiled_camera/)
 # Tiled Camera 
 
 A simple utility for setting up a pixel perfect camera sized to a specific number and size of "tiles" in your viewport. It also lets you set the clear color for outside the viewport:
