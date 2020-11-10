@@ -1,3 +1,10 @@
+## [0.0.3](https://github.com/sarkahn/tiled_camera/compare/v0.0.2...v0.0.3) (2020-11-10)
+
+
+### Bug Fixes
+
+* Added openupm badge ([647e96e](https://github.com/sarkahn/tiled_camera/commit/647e96e7d0f830c5675d67ab76bafa981106e3c5))
+
 ## [0.0.2](https://github.com/sarkahn/tiled_camera/compare/v0.0.1...v0.0.2) (2020-11-10)
 
 
