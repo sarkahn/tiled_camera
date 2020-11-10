@@ -19,8 +19,8 @@ openupm add com.sark.tiled_camera
 
 ##### Via the Package Manager (Install via git url...):
 `
-https://github.com/sarkahn/tiledcamera#upm
+https://github.com/sarkahn/tiled_camera#upm
 `
 
 ##### Via the repo (Clone the master branch):
-`https://github.com/sarkahn/tiledcamera.git` 
+`https://github.com/sarkahn/tiled_camera.git` 
