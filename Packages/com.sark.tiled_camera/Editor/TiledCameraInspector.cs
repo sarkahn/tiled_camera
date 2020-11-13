@@ -40,7 +40,7 @@ namespace Sark.RenderUtils
 
             var pixelCam = tar.PixelCamera;
 
-            if (!pixelCam.runInEditMode)
+            if (pixelCam == null || !pixelCam.runInEditMode)
                 return;
 
             float pixelRatio = pixelCam.pixelRatio;

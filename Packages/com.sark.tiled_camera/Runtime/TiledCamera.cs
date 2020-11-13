@@ -74,6 +74,15 @@ namespace Sark.RenderUtils
                 _camera.orthographic = true;
             }
 
+            if (_pixelCam == null)
+            {
+                _pixelCam = GetComponent<PixelPerfectCamera>();
+
+                _pixelCam.upscaleRT = true;
+                _pixelCam.cropFrameX = true;
+                _pixelCam.cropFrameY = true;
+            }
+
             if (_clearCamera == null)
             {
                 if (_clearCameraGO == null)
@@ -87,15 +96,6 @@ namespace Sark.RenderUtils
                 _clearCameraGO.hideFlags = HideFlags.HideInHierarchy;
                 _clearCamera.clearFlags = CameraClearFlags.SolidColor;
                 UpdateState();
-            }
-
-            if (_pixelCam == null)
-            {
-                _pixelCam = GetComponent<PixelPerfectCamera>();
-
-                _pixelCam.upscaleRT = true;
-                _pixelCam.cropFrameX = true;
-                _pixelCam.cropFrameY = true;
             }
 
 #if UNITY_EDITOR

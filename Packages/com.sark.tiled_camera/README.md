@@ -1,4 +1,4 @@
-# Tiled Camera (URP)
+# Tiled Camera
 
 A simple utility for setting up a pixel perfect camera sized to a specific number and size of "tiles" in your viewport. It also lets you set the clear color for outside the viewport:
 
