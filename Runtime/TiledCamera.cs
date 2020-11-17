@@ -52,10 +52,21 @@ namespace Sark.RenderUtils
             }
         }
 
+        [SerializeField]
+        Color _backgroundColor = Color.black;
+        public Color BackgroundColor
+        {
+            get => _backgroundColor;
+            set
+            {
+                _backgroundColor = value;
+                _camera.backgroundColor = value;
+            }
+        }
 
         [SerializeField]
         Color _clearColor = Color.black;
-        public Color BackgroundColor
+        public Color ClearColor
         {
             get => _clearColor;
             set
@@ -72,6 +83,7 @@ namespace Sark.RenderUtils
                 _camera = GetComponent<Camera>();
                 _camera.clearFlags = CameraClearFlags.SolidColor;
                 _camera.orthographic = true;
+                _camera.hideFlags = HideFlags.HideInInspector;
             }
 
             if (_pixelCam == null)
@@ -81,6 +93,7 @@ namespace Sark.RenderUtils
                 _pixelCam.upscaleRT = true;
                 _pixelCam.cropFrameX = true;
                 _pixelCam.cropFrameY = true;
+                _pixelCam.hideFlags = HideFlags.HideInInspector;
             }
 
             if (_clearCamera == null)
@@ -122,14 +135,21 @@ namespace Sark.RenderUtils
         // Update internal values that might be affected by user state changes
         void UpdateState()
         {
+            _camera.backgroundColor = _backgroundColor;
+
             _clearCamera.depth = _camera.depth - 1;
             _clearCamera.backgroundColor = _clearColor;
             _clearCamera.orthographicSize = _camera.orthographicSize;
 
             _pixelCam.assetsPPU = _tileSize.y;
 
-            _pixelCam.refResolutionX = _tileCount.x * _tileSize.x;
-            _pixelCam.refResolutionY = _tileCount.y * _tileSize.y;
+            int2 newRes = _tileCount * _tileSize;
+
+            Debug.Log($"New resolution {newRes}");
+
+            _pixelCam.refResolutionX = newRes.x;
+            _pixelCam.refResolutionY = newRes.y;
+
         }
 
 #if UNITY_EDITOR

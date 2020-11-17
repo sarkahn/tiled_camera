@@ -35,8 +35,8 @@ namespace Sark.RenderUtils
 
             var cam = tar.Camera;
 
-            int w = cam.pixelWidth;
-            int h = cam.pixelHeight;
+            int camWidth = cam.pixelWidth;
+            int camHeight = cam.pixelHeight;
 
             var pixelCam = tar.PixelCamera;
 
@@ -45,8 +45,12 @@ namespace Sark.RenderUtils
 
             float pixelRatio = pixelCam.pixelRatio;
 
+            int refResWidth = pixelCam.refResolutionX;
+            int refResHeight = pixelCam.refResolutionY;
+
             EditorGUILayout.LabelField("Camera Info", EditorStyles.boldLabel);
-            EditorGUILayout.LabelField($"Viewport Pixel Size: {w}, {h}");
+            EditorGUILayout.LabelField($"Camera Pixel Size: {camWidth}, {camHeight}");
+            EditorGUILayout.LabelField($"Pixel Camera Ref Res: {refResHeight}, {refResHeight}");
             EditorGUILayout.LabelField($"Pixel Ratio: {pixelRatio}");
 
             if (GUILayout.Button("Snap To Origin"))
