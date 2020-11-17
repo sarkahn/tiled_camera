@@ -145,8 +145,6 @@ namespace Sark.RenderUtils
 
             int2 newRes = _tileCount * _tileSize;
 
-            Debug.Log($"New resolution {newRes}");
-
             _pixelCam.refResolutionX = newRes.x;
             _pixelCam.refResolutionY = newRes.y;
 
