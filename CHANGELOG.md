@@ -1,3 +1,10 @@
+## [0.1.2](https://github.com/sarkahn/tiled_camera/compare/v0.1.1...v0.1.2) (2020-11-17)
+
+
+### Bug Fixes
+
+* Left in A debug.log ([b41de91](https://github.com/sarkahn/tiled_camera/commit/b41de910674d43828247f937164c616969b169f9))
+
 ## [0.1.1](https://github.com/sarkahn/tiled_camera/compare/v0.1.0...v0.1.1) (2020-11-17)
 
 
